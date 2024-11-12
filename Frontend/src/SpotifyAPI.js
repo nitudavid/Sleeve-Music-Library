@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { Buffer } from 'buffer';
 
-const CLIENT_ID = '833d6aa02ab049b9ad8fae1d2b8a00ac';
-const CLIENT_SECRET = 'd7c9d4c710b1471cb2d8c61ee3532104';
+const CLIENT_ID = 'placeholder';
+const CLIENT_SECRET = 'placeholder';
 const BASE_URL = 'https://api.spotify.com/v1';
 
 let accessToken = '';
