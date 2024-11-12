@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lists",
+  "info": {
+    "singularName": "list",
+    "pluralName": "lists",
+    "displayName": "Lists"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "listName": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "lists"
+    },
+    "username": {
+      "type": "string",
+      "required": false
+    },
+    "userAlbums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::users-album.users-album"
+    }
+  }
+}

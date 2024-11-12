@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_albums",
+  "info": {
+    "singularName": "users-album",
+    "pluralName": "users-albums",
+    "displayName": "UserAlbums",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "albumID": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "nota": {
+      "type": "decimal"
+    },
+    "userID": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "users_albums"
+    },
+    "listenedTo": {
+      "type": "boolean",
+      "default": false
+    },
+    "wantToListenTo": {
+      "type": "boolean",
+      "default": false
+    },
+    "albumTitle": {
+      "type": "string"
+    },
+    "albumCover": {
+      "type": "string"
+    },
+    "artistID": {
+      "type": "string"
+    },
+    "artistName": {
+      "type": "string"
+    },
+    "releaseDate": {
+      "type": "string"
+    },
+    "favorite": {
+      "unique": false,
+      "type": "integer"
+    }
+  }
+}
